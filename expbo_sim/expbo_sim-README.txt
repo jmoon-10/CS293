@@ -10,4 +10,4 @@ given in the assignment to make sure the values are inside 3% more or less.
 I know run_trial is correct as the values are similiar to the graph given in the assignment.
 
 I determined sample_size through trial and error making sure that the coefficient of variation was
-mostly under ~1%.
+mostly under ~1%. Initially starting at 1000, and finally ending at 5000 where the value stayed moslty under 1%
