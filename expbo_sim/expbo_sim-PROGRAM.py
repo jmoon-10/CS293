@@ -1,0 +1,66 @@
+import random
+import statistics
+
+# Global Variables
+max_k = 14 # max senders
+max_b = 4 # max backoff
+sample_size = 5000 # number of trials
+
+def ev_oneOK(k, xb): # estimated value for time to send 1st packet
+    total = 0
+    for _ in range(sample_size):
+        total += run_trial(k, xb)
+    return total / sample_size
+
+
+def run_trial(k, xb): # time taken on single attempt to send 1st packet
+    if k == 0:
+        return 0
+    if k == 1: 
+        return 1
+    
+    collisions = [0] * k
+    next_time = [0] * k
+    current_time = 0
+
+    while True:
+        sending = [i for i in range(k) if next_time[i] == current_time] # using index
+
+        if len(sending) == 1:
+            return current_time + 1
+        
+        if len(sending) > 1: # there is collision
+            for i in sending:
+                collisions[i] += 1
+                window = min(2**collisions[i], xb)
+                delay = random.randint(0, window-1)
+                next_time[i] = current_time + 1 + delay
+        
+        current_time += 1
+
+
+
+def run_all_ev(): # runs all combinations of k and xb
+    print(f"max_k={max_k} max_b={max_b} sample_size={sample_size}")
+    print("===============================")
+    for k in range(0, max_k+1):
+        for xb in range(max_b-1, max_b+1):
+            ev = ev_oneOK(k, xb)
+            print(f"k={k}, xb={xb}, ev_oneOK={ev}")
+
+def find_ss(): # function to find sample_size; ~5000 is when cv is <= ~1%
+    values = []
+    for _ in range(7):
+        values.append(ev_oneOK(4,4))
+    mean = statistics.mean(values)
+    stdev = statistics.stdev(values)
+    
+    cv = (stdev/mean) * 100
+    print(cv)
+
+
+def main():
+    run_all_ev()
+
+if __name__ == '__main__':
+    main()  
