@@ -11,3 +11,6 @@ I know run_trial is correct as the values are similiar to the graph given in the
 
 I determined sample_size through trial and error making sure that the coefficient of variation was
 mostly under ~1%. Initially starting at 1000, and finally ending at 5000 where the value stayed moslty under 1%
+
+I used very little AI but I did use it to better understand the assignment because I did get confused reading it, and had trouble 
+finding where to start.
