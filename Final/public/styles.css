@@ -75,7 +75,8 @@ nav {
 
 /* === ABOUT / PROJECTS === */
 #about, #projects {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -114,16 +115,65 @@ ul {
     text-shadow: 0 0 15px whitesmoke;
 }
 
-.about-container{
+#about .about-container{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
-.about-skills{
-    min-width: 50%;
+#about .about-main {
+    flex: 1 1 450px;
+}
+
+#about .about-skills{
+    flex: 1 1 400px;
+    max-width: 450px;
+    display: grid;
+    justify-items: center;
+}
+
+#about .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;            
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+    max-width: 420px;
+}
+
+#about .skill-card {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    border: 2px solid coral;
+}
+
+#about .skill-card img {
+    height: 70px;
+    width: auto;
+
+    object-fit: contain;
+    display: block;
+
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+}
+
+.skill-card span {
+    margin-top: 10px;
 }
 
 /* .about-main, .about-skills {
