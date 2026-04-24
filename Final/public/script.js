@@ -27,3 +27,24 @@ setTimeout(() =>{
     typing();
 }, 2100);
 
+//Basic Scroll transition
+window.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.hidden');
+    const triggerBottom = window.innerHeight * 0.70; // Trigger when element is at x% of screen height
+
+  elements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+        el.classList.add('show');
+    }
+    else{
+        el.classList.remove('show');
+    }
+  });
+})
+
+//refresh
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}

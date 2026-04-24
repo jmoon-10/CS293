@@ -28,11 +28,11 @@
     </header>
 
     <!--About-->
-    <section id="about">
+    <section id="about" class="hidden">
         <h2>About</h2>
         <div class="about-container">
             <div class="about-main">
-                <img src="images/pic.jpg" alt="headshot">
+                <img src="images/pic.jpg" alt="headshot" id="headshot">
                 <p>Hi my name is Joonho Moon! I am a student-athlete at Lewis & Clark College majoring in computer science playing golf.
                     I am experienced in using Python, C, and Java. I am especially interesed in problem-solving and backend systems.
                     In the near future I aspire to be a software engineer. Outside of programming, I enjoy golfing and snowboarding!
@@ -79,35 +79,48 @@
     </section>
         
         <!--Projects-->
-    <section id="projects">
+    <section id="projects" class="hidden">
         <h2>Projects</h2>
-        <h3>Project 1</h3>
-        <p>
-            Lorem ipsum style filler content to visualize how project descriptions 
-            will appear on the website. Used strictly for development and layout adjustments.
-        </p>
-        <a href="#">link1</a>
 
-        <h3>Project 2</h3>
-        <p>
-            Lorem ipsum style filler content to visualize how project descriptions 
-            will appear on the website. Used strictly for development and layout adjustments.
-        </p>
-        <a href="#">link2</a>
-
-        <h3>Project 3</h3>
-        <p>
-            Lorem ipsum style filler content to visualize how project descriptions 
-            will appear on the website. Used strictly for development and layout adjustments.
-        </p>
-        <a href="#">link3</a>
+        <div class="project">
+            <div class="project-info">
+                <h3>Project 1</h3>
+                <p>
+                    Lorem ipsum style filler content to visualize how project descriptions 
+                    will appear on the website. Used strictly for development and layout adjustments.
+                </p>
+            </div>
+            
+            <a href="https://www.google.com/" target="_blank"><img src="images/link.jpg" class="project-img"></a>
+        </div>
+        <div class="project">
+            <div class="project-info">
+                <h3>Project 2</h3>
+                <p>
+                    Lorem ipsum style filler content to visualize how project descriptions 
+                    will appear on the website. Used strictly for development and layout adjustments.
+                </p>
+            </div>
+           <a href="https://www.google.com/" target="_blank"><img src="images/link.jpg" class="project-img"></a>
+        </div>
+        <div class="project">
+            <div class="project-info">
+                <h3>Project 3</h3>
+                <p>
+                    Lorem ipsum style filler content to visualize how project descriptions 
+                    will appear on the website. Used strictly for development and layout adjustments.
+                </p>
+            </div>
+           <a href="https://www.google.com/" target="_blank"><img src="images/link.jpg" class="project-img"></a>
+        </div>
     </section>
 
     <!--Contact-->
     <section id="contact">
         <h2>Contact</h2>
-        <a href="mailto:moonjoonho10@gmail.com" class="link">Email</a>
+        <a href="mailto:moonjoonho10@gmail.com" target="_blank" class="link">Email</a>
         <a href="https://www.linkedin.com/in/joonhomoon" target="_blank" class="link">LinkedIn</a>
+        <!--TODO: Add contact Form-->
     </section>
 
     <!--Footer-->
