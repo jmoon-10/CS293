@@ -232,8 +232,6 @@ ul {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-
-    /* outline: 1px solid red;*/
 }
 
 .project-info p, h3 {
@@ -266,12 +264,21 @@ ul {
 
 
 /* === CONTACT === */
-.contact-link {
-    color: coral;
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact-link:hover {
-    color: white;
+.contact-links {
+    /* outline: 1px solid red; */
+}
+
+.link-img {
+    max-height: 30px;
+    max-width: auto;
+    padding: 0 5px;
 }
 
 
