@@ -284,6 +284,30 @@ ul {
     filter: brightness(200%);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin-bottom: 20px;
+    width: 40%;
+    min-width: 200px;
+}
+
+form input, form textarea {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-bottom: 2px;
+    font-family: inherit;
+}
+
+form textarea{
+    resize: none;
+    height: 100px;
+}
+
+
 
 /* === FOOTER === */
 
