@@ -271,14 +271,17 @@ ul {
     align-items: center;
 }
 
-.contact-links {
-    /* outline: 1px solid red; */
-}
-
 .link-img {
-    max-height: 30px;
+    max-height: 34px;
     max-width: auto;
     padding: 0 5px;
+
+    transition: all 0.14s ease-in-out
+}
+
+.link-img:hover {
+    transform: scale(1.2);
+    filter: brightness(200%);
 }
 
 
