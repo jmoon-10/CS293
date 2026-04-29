@@ -253,6 +253,7 @@ ul {
 .project-img {
     flex: 1;
     max-width: 70%;
+    min-height: auto;
     box-shadow: -11px -9px 3px coral;
     outline: 2px solid rgb(255, 203, 170);
     border-radius: 13px;
@@ -307,10 +308,13 @@ form textarea{
     height: 100px;
 }
 
-
-
 /* === FOOTER === */
-
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* === MISC === */
 html {
