@@ -270,6 +270,8 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    transition: all 0.6s ease-in-out;
 }
 
 .link-img {
