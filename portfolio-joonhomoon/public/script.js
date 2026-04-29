@@ -50,11 +50,3 @@ if ('scrollRestoration' in history) {
     const myform = document.querySelector("contact-form");
     myform.reset();
 }
-
-//reset form
-window.addEventListener('pageshow', (event) => {
-    if (window.performance && window.performance.navigation.type === 2) {
-    // Type 2 means the user arrived here via the back/forward button
-    window.location.reload();
-}
-});

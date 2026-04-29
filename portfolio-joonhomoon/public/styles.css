@@ -308,6 +308,10 @@ form textarea{
     height: 100px;
 }
 
+#submit-button:hover {
+    transform: scale(.98);
+}
+
 /* === FOOTER === */
 #footer {
     display: flex;
@@ -374,3 +378,16 @@ html {
     }
 }
 
+/* Success Form page */
+#home-button {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-bottom: 2px;
+    font-family: inherit;
+}
+
+#home-button:hover {
+    transform: scale(.95);
+}

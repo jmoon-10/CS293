@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Success!</title>
 </head>
 <body>
@@ -11,16 +12,16 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const name = params.get("form-name");
+        const name = params.get("form-name").toUpperCase();
         const mail = params.get("form-mail");
         const msg = params.get("form-message");
 
         document.getElementById("display").innerHTML = 
-            `${name} your form has successfully been submitted. <br>
+            `${name} your form has successfully been submitted! <br>
             Email -> ${mail} <br>
             Message -> ${msg}`;
     </script>
 
-    <input type="Button" value="Return to Home Page" id="home-button">
+    <input type="Button" value="Return to Home Page" onclick="window.location.href='index.html'" id="home-button">
 </body>
 </html>
